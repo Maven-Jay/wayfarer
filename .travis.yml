@@ -6,8 +6,6 @@ install:
 cache:
   directories:
     - "$HOME/.npm"
-before_script:
-  - psql - c "CREATE DATABASE wayfarer;" -U postgres
 script:
   - "npm run test"
 branches:
