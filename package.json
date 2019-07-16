@@ -5,7 +5,6 @@
   "main": "app.js",
   "scripts": {
     "test": "mocha --require @babel/register  --require @babel/polyfill  || true",
-    "build": "webpack --mode production",
     "start": "nodemon --exec babel-node app.js --presets @babel/preset-env",
     "serve": "babel-node app.js --presets @babel/preset-env"
   },
