@@ -1,3 +1,22 @@
 language: node_js
 node_js:
-  - stable
+  - "stable"
+install:
+  - "npm install"
+cache:
+  directories:
+    - "$HOME/.npm"
+before_script:
+  - psql - c "CREATE DATABASE wayfarer;" -U postgres
+script:
+  - "npm run test"
+branches:
+  only:
+    - develope
+notification:
+  email: false
+env:
+  - SECRET_KEY = bwroltubad92_ylcjmmaxaj
+  - DATABASE = 'wayfarer'
+  - DB_USER = 'postgres'
+  - DB_PASSWORD = 'sunnet'
