@@ -15,5 +15,7 @@
         "sourceType": "module"
     },
     "rules": {
+        "camelcase": 0,
+        "SnakeCase": true
     }
 }
